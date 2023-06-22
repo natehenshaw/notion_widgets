@@ -1,1 +1,145 @@
+<!DOCTYPE html>
+<html>
 
+<head>
+
+	<!-- Font Awesome -->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+
+	<!-- Google Font -->
+
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Grandstander&display=swap" rel="stylesheet">
+
+	<!-------->
+
+	<style>
+		* {
+			margin: 0;
+			padding: 0;
+			-webkit-box-sizing: border-box;
+			box-sizing: border-box;
+		}
+
+
+		.navMenu {
+		font-family: 'Grandstander', cursive; padding: 8px;
+			text-align: center;
+			margin: 7px auto;
+			width: fit-content;
+		}
+
+		.navMenu a {
+			color: #ffffff;
+			text-decoration: none;
+			text-transform: uppercase;
+			display: inline-block;
+			padding: 6px;
+		}
+
+		.background {
+			background-color: #2F3438 ;S
+		}
+
+		.border {
+			border: 3px solid #ffffff;
+
+		}
+
+		.navMenu a:hover {
+
+			color: #abd6ff;
+		}
+	</style>
+</head>
+
+<body>
+
+
+	<nav class="navMenu  border background">
+
+		<a id="all recipes" onclick="navigate(this.id)" href="#"> <i class="fa-solid fa-book-open"></i> all recipes</a>
+		<a id="breakfast" onclick="navigate(this.id)" href="#"> <i class="fa-solid fa-book-open"></i> breakfast</a>
+		<a id="lunch" onclick="navigate(this.id)" href="#"> <i class="fa-solid fa-book-open"></i> lunch</a>
+		<a id="dinner" onclick="navigate(this.id)" href="#"> <i class="fa-solid fa-book-open"></i> dinner</a>
+		<a id="baking" onclick="navigate(this.id)" href="#"> <i class="fa-solid fa-book-open"></i> baking</a>
+		<a id="beverages" onclick="navigate(this.id)" href="#"> <i class="fa-solid fa-book-open"></i> beverages</a>
+		<a id="fried" onclick="navigate(this.id)" href="#"> <i class="fa-solid fa-book-open"></i> fried</a>
+		<a id="fruit" onclick="navigate(this.id)" href="#"> <i class="fa-solid fa-book-open"></i> fruit</a>
+		<a id="meat" onclick="navigate(this.id)" href="#"> <i class="fa-solid fa-book-open"></i> meat</a>
+		<a id="pasta & noodles" onclick="navigate(this.id)" href="#"> <i class="fa-solid fa-book-open"></i> pasta & noodles</a>
+		<a id="roasted & baked" onclick="navigate(this.id)" href="#"> <i class="fa-solid fa-book-open"></i> roasted & baked</a>
+		<a id="salads" onclick="navigate(this.id)" href="#"> <i class="fa-solid fa-book-open"></i> salads</a>
+		<a id="sandwhiches & wraps" onclick="navigate(this.id)" href="#"> <i class="fa-solid fa-book-open"></i> sandwiches and wraps</a>
+		<a id="savoury" onclick="navigate(this.id)" href="#"> <i class="fa-solid fa-book-open"></i> savoury</a>
+		<a id="seafood" onclick="navigate(this.id)" href="#"> <i class="fa-solid fa-book-open"></i> seafood</a>
+		<a id="seasoning" onclick="navigate(this.id)" href="#"> <i class="fa-solid fa-book-open"></i> seasoning</a>
+		<a id="soups & stews" onclick="navigate(this.id)" href="#"> <i class="fa-solid fa-book-open"></i> soups & stews</a>
+		<a id="stirfry" onclick="navigate(this.id)" href="#"> <i class="fa-solid fa-book-open"></i> stirfry</a>
+		<a id="sweet" onclick="navigate(this.id)" href="#"> <i class="fa-solid fa-book-open"></i> sweet</a>
+		<a id="vegetables" onclick="navigate(this.id)" href="#"> <i class="fa-solid fa-book-open"></i> vegetables</a>
+
+
+	</nav>
+
+
+	<script>
+
+		let direction = "vertical";
+		if (direction === "vertical") {
+			document.head.insertAdjacentHTML("beforeend", `<style>.navMenu a {display: block; text-align:left; margin:7px} i{width:15px; margin-right:5px} .navMenu{margin:3px}</style>`)
+		}
+
+
+		function navigate(id) {
+
+			if (id == 'all recipes')
+				window.open("https://example.com", '_blank').focus();
+			if (id == 'breakfast')
+				window.open("https://example.com", '_blank').focus();
+			if (id == 'lunch')
+				window.open("https://example.com", '_blank').focus();
+			if (id == 'dinner')
+				window.open("https://example.com", '_blank').focus();
+			if (id == 'baking')
+				window.open("https://example.com", '_blank').focus();
+			if (id == 'beverages')
+				window.open("https://example.com", '_blank').focus();
+			if (id == 'fried')
+				window.open("https://example.com", '_blank').focus();
+			if (id == 'fruit')
+				window.open("https://example.com", '_blank').focus();
+			if (id == 'meat')
+				window.open("https://example.com", '_blank').focus();
+			if (id == 'pasta & noodles')
+				window.open("https://example.com", '_blank').focus();
+			if (id == 'roasted & baked')
+				window.open("https://example.com", '_blank').focus();
+			if (id == 'salads')
+				window.open("https://example.com", '_blank').focus();
+			if (id == 'sandwiches & wraps')
+				window.open("https://example.com", '_blank').focus();
+			if (id == 'savoury')
+				window.open("https://example.com", '_blank').focus();
+			if (id == 'seafood')
+				window.open("https://example.com", '_blank').focus();
+			if (id == 'seasoning')
+				window.open("https://example.com", '_blank').focus();
+			if (id == 'soups & stews')
+				window.open("https://example.com", '_blank').focus();
+			if (id == 'stirfry')
+				window.open("https://example.com", '_blank').focus();
+			if (id == 'sweet')
+				window.open("https://example.com", '_blank').focus();
+			if (id == 'vegetables')
+				window.open("https://example.com", '_blank').focus();
+	
+
+		}
+	</script>
+
+
+</body>
+
+</html>
