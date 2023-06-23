@@ -6,15 +6,17 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Grandstander&display=swap" rel="stylesheet">
 
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css">
+
   <style>
     body {
       margin: 0;
       overflow: hidden;
+      font-family: 'Grandstander', cursive;
     }
 
     .sidebar {
       width: 200px;
-      height: 100vh;
       background-color: #191919;
       padding: 20px;
       border: 2px solid white;
@@ -23,6 +25,8 @@
       top: 0;
       left: 0;
       z-index: 999;
+      overflow-y: auto;
+      max-height: calc(100vh - 20px); /* Subtract any additional margins or paddings applied to the body */
     }
 
     .sidebar h2 {
@@ -31,6 +35,8 @@
       text-transform: uppercase;
       color: white;
       padding: 10px 0;
+      display: flex;
+      align-items: center;
     }
 
     .sidebar h2 i,
@@ -80,7 +86,8 @@
       margin-top: 10px;
     }
 
-    .sidebar .meals-list li:last-child {
+    .sidebar .meals-list li:last-child,
+    .sidebar .categories-list li:last-child {
       margin-bottom: 10px;
     }
   </style>
