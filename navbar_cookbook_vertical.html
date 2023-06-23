@@ -94,6 +94,13 @@
     /* Prevent Notion from overlaying information on hover */
     .notion-overlay {
       pointer-events: none !important;
+
+      .notion-frame .notion-page-content {
+      pointer-events: none !important;
+    }
+
+    .notion-frame .notion-sidebar-container {
+      width: 300px !important;
     }
   </style>
 </head>
