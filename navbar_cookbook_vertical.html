@@ -103,21 +103,48 @@
       width: 300px !important;
     }
   </style>
-  <script>
-    // Add cache control headers for linked resources
-    function addCacheControlHeaders() {
+    <script>
+    // Add cache control headers for linked resources and optimize loading speed
+      function addCacheControlHeaders() {
       const links = document.querySelectorAll('a[target="_top"]');
+        
+      function optimizePageLoad() {
+      const links = document.querySelectorAll('a[target="_top"]');
+      const nonCriticalLinks = [];
+
       for (let i = 0; i < links.length; i++) {
         const link = links[i];
         link.setAttribute('rel', 'preload');
         link.setAttribute('as', 'document');
         link.setAttribute('crossorigin', 'anonymous');
         link.setAttribute('integrity', 'sha384-abc123'); // Replace with the actual integrity value for the resource if available
+
+        // Add data-critical attribute to listed items under "Meals" and "Categories" headings
+        if (
+          link.parentElement.classList.contains('meals-list') ||
+          link.parentElement.classList.contains('categories-list')
+        ) {
+          link.setAttribute('data-critical', 'true');
+        }
+
+        if (!link.hasAttribute('data-critical')) {
+          nonCriticalLinks.push(link);
+        }
       }
+
+      window.addEventListener('load', () => {
+        for (let i = 0; i < nonCriticalLinks.length; i++) {
+          const link = nonCriticalLinks[i];
+          const newLink = document.createElement('link');
+          newLink.setAttribute('rel', 'stylesheet');
+          newLink.setAttribute('href', link.getAttribute('href'));
+          document.head.appendChild(newLink);
+        }
+      });
     }
 
     // Invoke the function on page load
-    window.addEventListener('load', addCacheControlHeaders);
+    window.addEventListener('load', optimizePageLoad);
   </script>
 </head>
 <body>
