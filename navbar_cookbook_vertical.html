@@ -103,6 +103,22 @@
       width: 300px !important;
     }
   </style>
+  <script>
+    // Add cache control headers for linked resources
+    function addCacheControlHeaders() {
+      const links = document.querySelectorAll('a[target="_top"]');
+      for (let i = 0; i < links.length; i++) {
+        const link = links[i];
+        link.setAttribute('rel', 'preload');
+        link.setAttribute('as', 'document');
+        link.setAttribute('crossorigin', 'anonymous');
+        link.setAttribute('integrity', 'sha384-abc123'); // Replace with the actual integrity value for the resource if available
+      }
+    }
+
+    // Invoke the function on page load
+    window.addEventListener('load', addCacheControlHeaders);
+  </script>
 </head>
 <body>
   <div class="sidebar">
